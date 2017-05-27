@@ -8,7 +8,7 @@
                 <div class=""><div style="padding:20px;"><img width="700" src="{{$story->image_url}}"/></div></div>
                 <div class="col-lg-12">{!! $story->description !!}</div>
                 <div class="col-lg-12"><img href="{{ $story->image_url }}" /></div>
-                <div class="col-lg-12">Napisao: <a href="#">{{ $story->author->fullname }}</a></div>
+                <div class="col-lg-12">Autor: <a href="#">{{ $story->author->fullname }} <img width="32" height="32" src="{{$story->author->avatar}}"/></a></div>
                 <div class="col-lg-12"></div>
             </div>
         </div>

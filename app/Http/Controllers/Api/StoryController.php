@@ -48,7 +48,7 @@ class StoryController extends Controller
 //            return response('Username not sent', 422);
 //        }
 
-        $user = User::where('username', $request->username)->first();
+        $user = User::where('email', $request->username)->first();
         if ($user == null) {
             $user = User::first();
             //return response('User not found', 422);
