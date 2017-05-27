@@ -8,7 +8,7 @@ class Tour extends Model
 {
     protected $table = 'tour';
 
-    protected $appends = ['rating'];
+    protected $appends = ['average_rating'];
 
     public function tourSegments()
     {
@@ -16,8 +16,8 @@ class Tour extends Model
             ->orderBy('time', 'asc');
     }
 
-    public function getRatingAttribute()
+    public function getAverageRatingAttribute()
     {
-        return rand(2,5);
+        return rand(6,10) / 2;
     }
 }
