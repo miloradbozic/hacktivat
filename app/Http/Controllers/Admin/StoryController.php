@@ -10,7 +10,7 @@ use Hash;
 use Cloudder;
 use App\Story;
 
-class DashboardController extends Controller
+class StoryController extends Controller
 {
     protected $user;
     protected $id;
@@ -26,13 +26,12 @@ class DashboardController extends Controller
         $stories = Story::all();
         return view('admin.stories')
             ->withStories($stories);
-
     }
 
     public function pending()
     {
         $stories = Story::all(); //@todo fix
-        return view('admin.pendingStories')
+        return view('admin.story.pending')
             ->withStories($stories);
     }
 

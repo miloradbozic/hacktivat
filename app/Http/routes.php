@@ -38,12 +38,12 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'home', 'uses' => 'Admin\DashboardController@index'
     ]);
 
-    Route::get('/dashboard', [
-        'as' => 'home', 'uses' => 'Admin\DashboardController@index'
+    Route::get('/story/pending', [
+        'as' => 'story.pending', 'uses' => 'Admin\StoryController@pending'
     ]);
 
-    Route::get('/dashboard', [
-        'as' => 'home', 'uses' => 'Admin\DashboardController@index'
+    Route::get('/story/details', [
+        'as' => 'story.details', 'uses' => 'Admin\StoryController@details'
     ]);
 
 

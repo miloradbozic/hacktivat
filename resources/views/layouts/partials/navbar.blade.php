@@ -1,5 +1,5 @@
 <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container" style="width: 90%;">
         <div class="navbar-header">
             <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
                 <span class="sr-only">Toggle navigation</span>
@@ -11,9 +11,9 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="{{ request()->path() == "/" ? 'active' : 'n' }}"><a href="{{ route('home') }}">Statistika</a></li>
+                <li class="{{ request()->path() == "/" ? 'active' : 'n' }}"><a href="{{ route('home') }}">Statistika {{ request()->path() }}</a></li>
                 <li class="{{ request()->path() == "api" ? 'active' : 'n' }}"><a href="{{ route('api') }}">Api</a></li>
-                <li class="{{ request()->path() == "contact" ? 'active' : 'n' }}"><a href="{{ route('contact') }}">Nove znamenitosti <span class="badge">42</span></a></li>
+                <li class="{{ request()->path() == "story/pending" ? 'active' : 'n' }}"><a href="{{ route('story.pending') }}">Nove znamenitosti <span class="badge">42</span></a></li>
             </ul>
 
             @if (Auth::guest())
