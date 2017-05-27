@@ -22,7 +22,7 @@ class StoryController extends Controller
 
     public function user($userId)
     {
-        $story = Story::find($userId);
+        $story = Story::find($userId)->with('author')->first();
         return $story;
 
     }
