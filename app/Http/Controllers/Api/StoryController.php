@@ -7,9 +7,9 @@ use App\Http\Controllers\Controller;
 use Auth;
 use Hash;
 use Cloudder;
+use App\User;
 use App\Story;
 use Illuminate\Http\Request;
-
 
 class StoryController extends Controller
 {
@@ -29,14 +29,24 @@ class StoryController extends Controller
 
     public function save(Request $request)
     {
-        $data = [
-            'name' => $request->name,
-            'description' => $request->description,
-            'author_id' => 2 //$author->id
-        ];
+        return $request->all();
 
-        Story::create($data);
-        return 'OK';
-
+//        if (empty($request->username)) {
+//            return response('Username not sent', 422);
+//        }
+//
+//        $user = User::where('username', $request->username)->first();
+//        if ($user == null) {
+//            return response('User not found', 422);
+//        }
+//
+//        $data = [
+//            'name' => $request->name,
+//            'description' => $request->description,
+//            'author_id' => $user->id //$author->id
+//        ];
+//
+//        Story::create($data);
+//        return 'OK';
     }
 }
