@@ -31,7 +31,7 @@ class StoryController extends Controller
     {
         $data = [
             'name' => $request->name,
-            'description' => $request->details,
+            'description' => $request->description,
             'author_id' => 2 //$author->id
         ];
 
