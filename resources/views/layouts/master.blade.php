@@ -22,7 +22,7 @@
     </div>
     <footer class="footer">
         <div class="container text-center">
-        <p class="pull-left">© 2015 Company, Inc. All Rights Reserved</p>
+        <p class="pull-left">© 2017 Montenegrowonders</p>
         <ul class="pull-right list-inline">
             <li>
                 <a href="https://github.com/unicodeveloper/laravel-hackathon-starter">GitHub Project</a>

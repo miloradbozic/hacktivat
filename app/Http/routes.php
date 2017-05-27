@@ -38,6 +38,14 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'home', 'uses' => 'Admin\DashboardController@index'
     ]);
 
+    Route::get('/dashboard', [
+        'as' => 'home', 'uses' => 'Admin\DashboardController@index'
+    ]);
+
+    Route::get('/dashboard', [
+        'as' => 'home', 'uses' => 'Admin\DashboardController@index'
+    ]);
+
 
     Route::get('/', [
     'as' => 'home', 'uses' => 'PageController@home'
