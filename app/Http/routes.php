@@ -11,7 +11,6 @@
 |
 */
 
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -20,10 +19,23 @@
 | This route group applies the "web" middleware group to every route
 | it contains. The "web" middleware group is defined in your HTTP
 | kernel and includes session state, CSRF protection, and more.
-|
 */
 
+Route::group(['namespace' => 'Api'], function () {
+    Route::get('/api/story/all', ['as' => 'api.story.all', 'uses' => 'StoryController@all']);
+    Route::get('/api/tour/all', ['as' => 'api.tour.all', 'uses' => 'TourController@all']);
+    /*Route::post(
+        '/lead/infusionsoft-call',
+        ['as' => 'api.lead.infusionsoft-call', 'uses' => 'Web\LeadController@infusionsoftCall']
+    );*/
+});
+
 Route::group(['middleware' => ['web']], function () {
+
+    Route::get('/dashboard', [
+        'as' => 'home', 'uses' => 'Admin\DashboardController@index'
+    ]);
+
 
     Route::get('/', [
     'as' => 'home', 'uses' => 'PageController@home'
