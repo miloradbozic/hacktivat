@@ -18,4 +18,11 @@ class StoryController extends Controller
         return $stories;
 
     }
+
+    public function user($userId)
+    {
+        $story = Story::find($userId);
+        return $story;
+
+    }
 }

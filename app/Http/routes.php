@@ -23,7 +23,9 @@
 
 Route::group(['namespace' => 'Api'], function () {
     Route::get('/api/story/all', ['as' => 'api.story.all', 'uses' => 'StoryController@all']);
+    Route::get('/api/story/{userId}', ['as' => 'api.story.user', 'uses' => 'StoryController@user']);
     Route::get('/api/tour/all', ['as' => 'api.tour.all', 'uses' => 'TourController@all']);
+    Route::get('/api/tour/{userId}', ['as' => 'api.tour.user', 'uses' => 'TourController@user']);
     /*Route::post(
         '/lead/infusionsoft-call',
         ['as' => 'api.lead.infusionsoft-call', 'uses' => 'Web\LeadController@infusionsoftCall']
