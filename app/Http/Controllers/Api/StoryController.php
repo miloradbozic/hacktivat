@@ -29,7 +29,7 @@ class StoryController extends Controller
 
     public function upload(Request $request)
     {
-        $url = Config::get('app.url');
+        $url = \Config::get('app.url');
         $imageName = $this->generateRandomString(14) . '.' . $request->file('image')->getClientOriginalExtension();
         $request->file('image')->move(
             base_path() . '/public/images/story/', $imageName
