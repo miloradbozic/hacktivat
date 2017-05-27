@@ -49,7 +49,7 @@ U srednjem vijeku postojao je veliki broj sličnih gradova i utvrđenja koji su 
 Kad je grad Koznik sagrađen, kazuje legenda, prokleta Jerina je naredila da se otisnu skele, dok su četvorica glavnih neimara ostala bespomoćna nad ambisom. Valjda nije željela da odaju tajne podignutog grada. Prema kazivanju koje i do danas traje, neimari su pokušali da se spasu tako što su napravili krila od dasaka. Jedan je pao u provaliju i nastradao. Drugi, zvani Orle, je uspio da poleti i da se spusti u blizini grada. To mjesto je prozvano i danas se zove Orlić. Treći, Ostoja, preletio je preko rijeke i to se mjesto po njemu prozvalo Osoje. Četvrti je dugo klepetao, klopotao krilima i spustio se na uzvišenje koje se i danas zove Klopet.</p>
 ",
                 'image_url' => $url . '/images/story/koznik.jpg',
-                'author_id' => 2
+                'author_id' => 3
             ],
             [
                 'id' => 2,
@@ -58,7 +58,7 @@ Kad je grad Koznik sagrađen, kazuje legenda, prokleta Jerina je naredila da se 
 </p><p>Prepisivačko središte pri manastiru Svete Trojice dostiglo je vrhunac sredinom XVII vijeka, ponajviše zahvaljujući monahu Gavrilu Trojičaninu, proslavljenom prepisivaču i vještom priređivaču starih tekstova, koji je – kao osobito obrazovan i čovjek živog duha – bogatim, gotovo raskošnim jezikom prepisao nekoliko hiljada listova, među kojima se posebno ističu: Psaltir (1642/43), Šestodnev bugarskog egzarha Jovana i Hrišćanska topografija Kozme Indikoplova (1649), kao i Vrhobreznički hronograf (1650), koji se čuva u Narodnom muzeju u Pragu. Minijature iz Psaltira, autora poznatog slikara Jovana, kao i minijature zografa Andreje Raičevića, iz Trojičkog Šestodneva i Hrišćanske topografije, predstavljaju jedan od najvećih poduhvata minijaturnog slikarstva u doba osmanske vladavine u ovim krajevima. Pored rukopisa nastalih u krugu manastirske prepisivačke radionice, riznica Svete Trojice čuva mnoge knjige koje potiču iz drugih manastira, a inicijalima na početnim listovima rukopisa osobito se izdvajaju, Psaltir iz prve polovine XIV vijeka i Pljevaljski (Tašlidžki) služabnik Tvrtka Pripkovića, takođe iz XIV vijeka, koji se danas čuva u Ruskoj nacionalnoj biblioteci u Sankt-Peterburgu.
 </p><p>Iz naprijed navedenog jasno se zaključuje da je manastir Sveta Trojica najveći i najznačajniji prepisivački centar iz osmanskog perioda na teritoriji savremene Crne Gore sa izuzetno vrijednom bibliotekom. Međutim, to se nikada ne ističe u turističkoj valorizaciji samog manastira i turisti ostaju uskraćeni za tu važnu informaciju. Smatramo da je potrebno osmisliti načine kako bi se izuzetno vrijedna biblioteka manastira Sveta Trojica – kao produkt dugotrajne prepisivačke djelatnosti najvećeg i najznačajnijeg prepisivačkog centra iz osmanskog perioda u Crnoj Gori – značajnije valorizovala u turističkoj promociji manastira Sveta Trojica, Pljevalja i Crne Gore. U tom smjeru, namjera Zavičajnog muzeja jeste da publikuje informativni katalog sa osnovnim podacima o najznačajnijim djelima prepisanim u Svetoj Trojici i na taj način turistički promoviše ovaj osobito značajan aspekt duhovnog nasljeđa Crne Gore i Pljevalja.  ",
                 'image_url' => $url . '/images/story/sveta-trojica.jpg',
-                'author_id' => 2
+                'author_id' => 3
             ],
             [
                 'id' => 3,
@@ -71,7 +71,7 @@ Kad je grad Koznik sagrađen, kazuje legenda, prokleta Jerina je naredila da se 
 Ljepotu Šardrvana Husein-pašine džamije zapazili su brojni putopisci koji su prošli kroz Pljevlja, tadašnju Tašlidžu: a) Francuz Filip Difren-Kane (1573) zabilježio je da se u džamiji ovog mjesta vidi lijepa i umjetnički rađena česma; Mletački poslanik u Carigradu Paolo Kontarini (1580) u svom dnevniku ističe takođe džamiju sa lijepim šardrvanom; Francuski putopisac Lefevr 1611. zapisao je da Pljevlja imaju tri džamije, dvije od kamena, sa lijepom česmom u jednoj od njih, i treću od drveta. 
 	<p></p>O „lijepoj i umjetnički rađenoj česmi“ Husein-pašine džamije postoji zanimljivo predanje koje govori o multikulturnom karakteru Pljevalja. Naime, kako je voda u šadrvan dovedena sa izvora koji se nalazi u blizini manastira Sveta Trojice, udaljenog 2. km od džamije, u narodu je sačuvano predanje o načinu na koji je voda dovedena do šadrvana. Kada je Husein-paša gradio džamiju, majstori su mu skrenuli pažnju da ne mogu izgraditi šadrvan jer se u njegovoj blizini ne nalazi ni jedan izvor, tako da su majstori predložili Husein-paši da se lično obrati igumanu manastira Sveta. Trojica, na čijem imanju se nalazio izvor sa dovoljno pitke vode. Husein-paša je prihvatio ovu sugestiju i zamolio igumana da mu dozvoli da sa manastirskog izvora dovede vodu za potrebe šadrvana. Kako se iguman toj molbi opirao,  Husein-paša je pribjegao lukavstvu. Nakon više pokušaja uspjelo mu je da od igumana dobije dozvolu da sa crkvenog posjeda dovede vodu koju će koristiti dan i noć. Kada je prošlo dvadest četiri časa, iguman je došao kod paše sa zahtjevom da se se sporna voda više ne koristi, jer je prošao jedan dan i jedna noć. Na to paša odgovori da on nije rekao koliko će dana i noći biti, već samo dan i noć. Pošto se dan i noć stalno smjenjuju, onda i voda ostaje da se koristi sve dok traje dan i noć.</p>",
                 'image_url' => $url . '/images/story/husein-dzamija.jpg',
-                'author_id' => 2
+                'author_id' => 3
             ],
             [
                 'id' => 4,
@@ -82,7 +82,7 @@ Ljepotu Šardrvana Husein-pašine džamije zapazili su brojni putopisci koji su 
 </p><p>Zavičajni muzej u Pljevljima upravo je došao u posjed dva austrijska dokumenata iz Državnog arhiva Bosne i Hercegovine na osnovu kojih se zaključuje da je pivara u Pljevljima počela sa radom 1882. godine (a ne kao što je do sada bilo mišljenje 1889. godine), tako da bi projekat bio praćen pratio ozbiljnim istraživačkim radom i pribavljanjem dodatnih austrijskih dokumenata iz Državnog arhiva Bosne i Hercegovine. Ovaj zanimljiv podatak, predstavljen na informativnoj tabli, pored koje bi stajalo autentično bure za pivo, bi na turistički dopadljiv način svjedočio o intenzivnom razvoju grada u vremenu kada su se u Pljevljima susreli osmanski i srednjevropski kulturni uticaji. 
                 </p>",
                 'image_url' => $url . '/images/story/pivara.jpg',
-                'author_id' => 2
+                'author_id' => 3
             ]
         ]);
     }

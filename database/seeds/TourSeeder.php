@@ -17,14 +17,14 @@ class TourSeeder extends Seeder
                 'name' => "Obilazak Pjevlja",
                 'description' => "Jednodnevni obilazak grada Pjevlja, uključuje obilazak manastira Sveta Trojica i Husein-pašine džamije uz ručak u restoranu Ognjište.",
                 'price' => 60,
-                'author_id' => 2
+                'author_id' => 3
             ],
             [
                 'id' => 2,
                 'name' => "Boravak u etno selu 'Milogora'",
                 'description' => "Boravak u etno selu Milogora sa oblizakom srednjevekovnog grada Koznik i rafting rekom Tarom.",
                 'price' => 110,
-                'author_id' => 2
+                'author_id' => 3
             ]
         ]);
     }
