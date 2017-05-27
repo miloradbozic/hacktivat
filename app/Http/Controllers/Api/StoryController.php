@@ -35,7 +35,11 @@ class StoryController extends Controller
             base_path() . '/public/images/story/', $imageName
         );
 
-        return $url . '/images/story/' . $imageName;
+        return [
+            'url' => $url,
+            'imageName' => $imageName,
+            'imagePath' =>  $url . '/images/story/' . $imageName
+        ];
     }
 
     public function save(Request $request)
