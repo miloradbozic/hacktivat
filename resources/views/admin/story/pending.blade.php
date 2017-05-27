@@ -15,10 +15,11 @@
         @include('layouts.partials.alerts')
         <table class="table table-hover">
             <tr>
-                <th>Naziv</th>
+                <th style="width: 200px">Naziv</th>
                 <th>Kratak opis</th>
                 <th>Slika</th>
-                <th>Autor</th>
+                <th style="width: 150px;">Autor</th>
+                <th>Akcija</th>
             </tr>
             @foreach($stories as $story)
             <tr>
@@ -26,6 +27,7 @@
                 <td class="elipsis"> {{ strip_tags($story->description) }}</td>
                 <td> <img with="100" height=64" src="{{ $story->image_url }}"/></td>
                 <td> {{ $story->author->fullname }}</td>
+                <td> <a class="btn btn-default" href="{{route('story.details', ['id' => 1])}}">Otvori detalje</a></td>
             </tr>
             @endforeach
         </table>

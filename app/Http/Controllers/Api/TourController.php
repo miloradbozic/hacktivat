@@ -16,7 +16,6 @@ class TourController extends Controller
     {
         $tours = Tour::with('tourSegments.story')->get();
         return $tours;
-
     }
 
     public function user($userId)

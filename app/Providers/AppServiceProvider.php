@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
 					$this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
 				}
 				// A 'in browser' debug bar
-				$this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+				//$this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
 				break;
 			// testing env
 			case '':

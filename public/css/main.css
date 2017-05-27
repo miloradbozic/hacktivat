@@ -1,3 +1,11 @@
 .main-container {
     margin-top: 80px;
 }
+
+.container {
+    width: 90%;
+}
+
+td {
+    padding: 20px !important;
+}

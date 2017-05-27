@@ -10,6 +10,10 @@ class Story extends Model
 
     protected $appends = ['average_rating', 'reviews_count'];
 
+    protected $guarded = ['id'];
+
+    public $timestamps = false;
+
     const STATUS_PENDING = 0;
     const STATUS_APPROVED = 1;
     const STATUS_DECLINED = 2;

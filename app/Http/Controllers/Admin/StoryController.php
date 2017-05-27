@@ -35,10 +35,10 @@ class StoryController extends Controller
             ->withStories($stories);
     }
 
-    public function details($storyId)
+    public function details($id)
     {
-        $story = Story::find($storyId);
-        return view('admin.story')->withStory($story);
+        $story = Story::find($id);
+        return view('admin.story.details')->withStory($story);
 
     }
 

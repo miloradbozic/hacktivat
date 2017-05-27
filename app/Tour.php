@@ -10,6 +10,10 @@ class Tour extends Model
 
     protected $appends = ['average_rating', 'reviews_count'];
 
+    public $timestamps = false;
+
+    protected $guarded = ['id'];
+
     public function tourSegments()
     {
         return $this->hasMany('App\TourSegment', 'segment_id', 'id')

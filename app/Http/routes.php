@@ -23,13 +23,10 @@
 
 Route::group(['namespace' => 'Api'], function () {
     Route::get('/api/story/all', ['as' => 'api.story.all', 'uses' => 'StoryController@all']);
+    Route::post('/api/story/save', ['as' => 'api.story.save', 'uses' => 'StoryController@save']);
     Route::get('/api/story/{userId}', ['as' => 'api.story.user', 'uses' => 'StoryController@user']);
     Route::get('/api/tour/all', ['as' => 'api.tour.all', 'uses' => 'TourController@all']);
     Route::get('/api/tour/{userId}', ['as' => 'api.tour.user', 'uses' => 'TourController@user']);
-    /*Route::post(
-        '/lead/infusionsoft-call',
-        ['as' => 'api.lead.infusionsoft-call', 'uses' => 'Web\LeadController@infusionsoftCall']
-    );*/
 });
 
 Route::group(['middleware' => ['web']], function () {
@@ -42,10 +39,17 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'story.pending', 'uses' => 'Admin\StoryController@pending'
     ]);
 
-    Route::get('/story/details', [
+    Route::get('/story/details/{id}', [
         'as' => 'story.details', 'uses' => 'Admin\StoryController@details'
     ]);
 
+    Route::get('/story/approve/{id}', [
+        'as' => 'story.approve', 'uses' => 'Admin\StoryController@approve'
+    ]);
+
+    Route::get('/story/reject/{id}', [
+        'as' => 'story.reject', 'uses' => 'Admin\StoryController@reject'
+    ]);
 
     Route::get('/', [
     'as' => 'home', 'uses' => 'PageController@home'

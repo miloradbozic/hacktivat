@@ -8,6 +8,8 @@ use Auth;
 use Hash;
 use Cloudder;
 use App\Story;
+use Illuminate\Http\Request;
+
 
 class StoryController extends Controller
 {
@@ -16,13 +18,25 @@ class StoryController extends Controller
     {
         $stories = Story::all();
         return $stories;
-
     }
 
     public function user($userId)
     {
         $story = Story::find($userId);
         return $story;
+
+    }
+
+    public function save(Request $request)
+    {
+        $data = [
+            'name' => $request->name,
+            'description' => $request->details,
+            'author_id' => 2 //$author->id
+        ];
+
+        Story::create($data);
+        return 'OK';
 
     }
 }
