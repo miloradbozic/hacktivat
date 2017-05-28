@@ -89,7 +89,7 @@
                     callbacks: {
                         label : function(tooltipItem, data) {
                             console.log(tooltipItem, data);
-                            return stories[tooltipItem.index].name;
+                            return stories[tooltipItem.index].name + '                   ' + tooltipItem.xLabel + " / " + tooltipItem.yLabel;
                         }
                     }
                 },

@@ -10,17 +10,19 @@
             <i class="fa fa-cube"></i> MontenegroWonders</a>
         </div>
         <div class="collapse navbar-collapse">
+            @if (Auth::guest() == false)
             <ul class="nav navbar-nav">
                 <li class="{{ request()->path() == "dashboard" ? 'active' : 'n' }}"><a href="{{ route('dashboard') }}">Pregled</a></li>
+                <li class="{{ request()->path() == "tour/all" ? 'active' : 'n' }}"><a href="{{ route('tour.all') }}">Izleti</a></li>
                 <li class="{{ request()->path() == "story/approved" ? 'active' : 'n' }}"><a href="{{ route('story.approved') }}">Znamenitosti</a></li>
                 <li class="{{ request()->path() == "story/pending" ? 'active' : 'n' }}"><a href="{{ route('story.pending') }}">Nove znamenitosti <span class="badge">{{$pendingStoriesCount}}</span></a></li>
-                <li class="{{ request()->path() == "tour/all" ? 'active' : 'n' }}"><a href="{{ route('tour.all') }}">Izleti</a></li>
             </ul>
+            @endif
 
             @if (Auth::guest())
             <ul class="nav navbar-nav navbar-right">
-                <li class="{{ request()->path() == "login" ? 'active' : 'n' }}"><a href="{{ route('auth.login') }}">Login</a></li>
-                <li class="{{ request()->path() == "signup" ? 'active' : 'n' }}"><a href="{{ route('auth.register') }}">Create Account</a></li>
+                <li class="{{ request()->path() == "login" ? 'active' : 'n' }}"><a href="{{ route('auth.login') }}">Uloguj se</a></li>
+                <li class="{{ request()->path() == "signup" ? 'active' : 'n' }}"><a href="{{ route('auth.register') }}">Napravi nalog</a></li>
             </ul>
             @else
             <ul class="nav navbar-nav navbar-right">

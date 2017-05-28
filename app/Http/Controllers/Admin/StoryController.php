@@ -62,6 +62,7 @@ class StoryController extends Controller
     {
         $story = Story::find($id);
         $story->status = Story::STATUS_DECLINED;
+        $story->save();
         return redirect()->route("story.pending");
     }
 }

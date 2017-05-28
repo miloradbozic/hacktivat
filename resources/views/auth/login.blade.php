@@ -6,7 +6,7 @@
         @include('layouts.partials.alerts')
 
         <div class="page-header">
-            <h3>Sign In</h3>
+            <h3>Uloguj se</h3>
         </div>
 
          <form role="form" method="POST" action="{{ route('auth.login') }}" class="form-horizontal" _lpchecked="1">
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <label for="password" class="col-sm-2 control-label">Password</label>
+                <label for="password" class="col-sm-2 control-label">Lozinka</label>
                 <div class="col-sm-8">
                     <input type="password" name="password" id="password" class="form-control">
                     @if ($errors->has('password'))
@@ -32,8 +32,8 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-user"></i> Login</button>
-                    <a href="{{ url('/password/reset') }}" class="btn btn-link">Forgot your password?</a>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-user"></i> Uloguj se</button>
+                    <a href="{{ url('/password/reset') }}" class="btn btn-link">Zaboravili ste lozinku?</a>
                 </div>
             </div>
         </form>
