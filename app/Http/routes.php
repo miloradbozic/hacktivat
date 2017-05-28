@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Api'], function () {
     Route::post('/api/story/save', ['as' => 'api.story.save', 'uses' => 'StoryController@save']);
     Route::get('/api/story/{userId}', ['as' => 'api.story.user', 'uses' => 'StoryController@user']);
     Route::get('/api/tour/all', ['as' => 'api.tour.all', 'uses' => 'TourController@all']);
+    Route::post('/api/tour/save', ['as' => 'api.tour.save', 'uses' => 'TourController@save']);
     Route::get('/api/tour/{userId}', ['as' => 'api.tour.user', 'uses' => 'TourController@user']);
 });
 
