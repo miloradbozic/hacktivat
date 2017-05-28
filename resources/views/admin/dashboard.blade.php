@@ -42,6 +42,7 @@
                 </table>
             </div>
         </div>
+        <!--
         <h2>Statistika za doživljaje</h2>
         <div class="row">
             <div class="col-md-6"><canvas id="canvas2"></canvas></div>
@@ -82,6 +83,7 @@
                 </table>
             </div>
         </div>
+        -->
     </div>
 
     <script>
