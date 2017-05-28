@@ -2,6 +2,7 @@
 @section('content')
     <div class="main-container">
 
+        <h2>Statistika za znamenitosti</h2>
         <div class="row">
             <div class="col-md-6"><canvas id="canvas"></canvas></div>
             <div class="col-md-6">
@@ -39,7 +40,46 @@
                     </tr>
                     </tbody>
                 </table>
-
+            </div>
+        </div>
+        <h2>Statistika za doživljaje</h2>
+        <div class="row">
+            <div class="col-md-6"><canvas id="canvas2"></canvas></div>
+            <div class="col-md-6">
+                <table class="table table-striped">
+                    <thead> <tr>
+                        <th>#</th>
+                        <th>Ime</th>
+                        <th>Prosecna ocena</th>
+                        <th>Autor</th>
+                    </tr> </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Prva pivara u Crnoj Gori</td>
+                        <td>4.8</td>
+                        <td>Marko Markovic</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Husein-pašina džamija</td>
+                        <td>4.5</td>
+                        <td>Marko Markovic</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Biblioteka manastira Sveta Trojica iz Pjevlja</td>
+                        <td>4.2</td>
+                        <td>Marko Markovic</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Srednjevekovni grad Koznik</td>
+                        <td>3.1</td>
+                        <td>Marko Markovic</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

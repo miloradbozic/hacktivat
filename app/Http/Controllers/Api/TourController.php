@@ -62,7 +62,10 @@ class TourController extends Controller
         }
 
         //var_dump($dump); die();
-        return 'OK';
+        return response()->json([
+            'status' => 'OK',
+            'message' => 'OK'
+        ]);
     }
 
     /**
