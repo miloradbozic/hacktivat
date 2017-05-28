@@ -16,7 +16,7 @@ class StoryController extends Controller
 
     public function all()
     {
-        $stories = Story::with('author')->get();
+        $stories = Story::with('author')->where('status', Story::STATUS_APPROVED)->get();
         return $stories;
     }
 
