@@ -30,15 +30,20 @@ class StoryController extends Controller
     public function upload(Request $request)
     {
         $url = \Config::get('app.url');
-        $imageName = $this->generateRandomString(14) . '.' . $request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(
-            base_path() . '/public/images/story/', $imageName
-        );
+//        $imageName = $this->generateRandomString(14) . '.' . $request->file('image')->getClientOriginalExtension();
+//        $request->file('image')->move(
+//            base_path() . '/public/images/story/', $imageName
+//        );
+
+        $filename  = $request->file('image')->getRealPath();
+        Cloudder::upload($filename, null);
+        list($width, $height) = getimagesize($filename);
+        $imagePath = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
 
         return [
             'url' => $url,
-            'imageName' => $imageName,
-            'imagePath' =>  $url . '/images/story/' . $imageName
+            'imageName' => $filename,
+            'imagePath' =>  $imagePath
         ];
     }
 
