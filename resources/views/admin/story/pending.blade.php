@@ -27,7 +27,7 @@
                 <td class="elipsis"> {{ strip_tags($story->description) }}</td>
                 <td> <img with="100" height=64" src="{{ $story->image_url }}"/></td>
                 <td> {{ $story->author->fullname }}</td>
-                <td> <a class="btn btn-default" href="{{route('story.details', ['id' => 1])}}">Otvori detalje</a></td>
+                <td> <a class="btn btn-default" href="{{route('story.details', ['id' => $story->id])}}">Otvori detalje</a></td>
             </tr>
             @endforeach
         </table>

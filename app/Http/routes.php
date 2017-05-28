@@ -48,8 +48,8 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'story.approve', 'uses' => 'Admin\StoryController@approve'
     ]);
 
-    Route::get('/story/reject/{id}', [
-        'as' => 'story.reject', 'uses' => 'Admin\StoryController@reject'
+    Route::get('/story/decline/{id}', [
+        'as' => 'story.decline', 'uses' => 'Admin\StoryController@decline'
     ]);
 
     Route::get('/', [

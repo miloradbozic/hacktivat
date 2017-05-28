@@ -30,7 +30,7 @@ class StoryController extends Controller
 
     public function pending()
     {
-        $stories = Story::all(); //@todo fix
+        $stories = Story::where('status', 0)->get();
         return view('admin.story.pending')
             ->withStories($stories);
     }
@@ -42,22 +42,20 @@ class StoryController extends Controller
 
     }
 
-    public function approve(Request $request)
+    public function approve(Request $request, $id)
     {
-        $storyId = $request->get('storyId');
-        $story = Story::find($storyId);
+        $story = Story::find($id);
         $story->status = Story::STATUS_APPROVED;
         $story->save();
 
         $request->session()->flash('alert-success', 'Znamenitost je odobrena!');
-        return redirect()->route("admin.pendingStories");
+        return redirect()->route("story.pending");
     }
 
-    public function decline(Request $request)
+    public function decline(Request $request, $id)
     {
-        $storyId = $request->get('storyId');
-        $story = Story::find($storyId);
+        $story = Story::find($id);
         $story->status = Story::STATUS_DECLINED;
-        return redirect()->route("photo.pendingStories");
+        return redirect()->route("story.pending");
     }
 }

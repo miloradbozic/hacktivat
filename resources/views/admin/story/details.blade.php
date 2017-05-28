@@ -15,7 +15,7 @@
         <div class="row" style="padding: 20px;">
             <span>Komentar: </span><textarea style="margin-bottom: 10px;" class="form-control"></textarea>
             <a class="btn btn-success btn-lg" style="margin-right:20px;" href="{{route('story.approve', ['id' => $story->id])}}"> Odobri </a>
-            <a class="btn btn-default btn-lg" href="{{route('story.reject', ['id' => $story->id])}}"> Odbaci </a>
+            <a class="btn btn-default btn-lg" href="{{route('story.decline', ['id' => $story->id])}}"> Odbaci </a>
         </div>
     </div>
 @stop
