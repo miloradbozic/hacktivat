@@ -28,10 +28,17 @@ class StoryController extends Controller
             ->withStories($stories);
     }
 
+    public function approved()
+    {
+        $stories = Story::where('status', Story::STATUS_APPROVED)->get();
+        return view('admin.story.list')
+            ->withStories($stories);
+    }
+
     public function pending()
     {
         $stories = Story::where('status', 0)->get();
-        return view('admin.story.pending')
+        return view('admin.story.list')
             ->withStories($stories);
     }
 
@@ -39,7 +46,6 @@ class StoryController extends Controller
     {
         $story = Story::find($id);
         return view('admin.story.details')->withStory($story);
-
     }
 
     public function approve(Request $request, $id)

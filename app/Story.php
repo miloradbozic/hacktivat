@@ -33,4 +33,9 @@ class Story extends Model
         return $this->hasOne('App\User', 'id', 'author_id')
             ->orderBy('id', 'asc');
     }
+
+    public static function getPendingStoriesCount()
+    {
+        return self::where('status',0)->count();
+    }
 }

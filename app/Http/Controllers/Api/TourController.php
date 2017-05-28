@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 
+use App\TourSegment;
 use Auth;
 use Hash;
 use Cloudder;
@@ -29,7 +30,38 @@ class TourController extends Controller
 
     public function save(Request $request)
     {
-        $user = $this->getUser($request);
+        $data = $request->all();
+        $user = User::where('email', $request->username)->first();
+        if ($user == null) {
+            $user = User::where('email', 'marko@mailinator.com')->first();
+            //return response('User not found', 422);
+        }
+
+        $tourData = [
+            'name' => $request->name,
+            'description' => $request->description,
+            'price' => $request->price,
+            'author_id' => $user->id
+        ];
+
+        $tour = Tour::create($tourData );
+
+        foreach ($data['tour_segments'] as $segment)
+        {
+            $segmentData = [
+                'description' => $segment['description'],
+                'time' => $segment['time'],
+                'story_id' => $segment['story_id'],
+                'segment_id' => $tour['id'],
+                /*'lat' => NULL,
+                'long' => NULL*/
+            ];
+
+            //$dump[]= $segmentData;
+            TourSegment::create($segmentData);
+        }
+
+        //var_dump($dump); die();
         return 'OK';
     }
 

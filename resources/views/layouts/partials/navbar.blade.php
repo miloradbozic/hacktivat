@@ -11,9 +11,10 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="{{ request()->path() == "/" ? 'active' : 'n' }}"><a href="{{ route('home') }}">Statistika {{ request()->path() }}</a></li>
-                <li class="{{ request()->path() == "api" ? 'active' : 'n' }}"><a href="{{ route('api') }}">Api</a></li>
-                <li class="{{ request()->path() == "story/pending" ? 'active' : 'n' }}"><a href="{{ route('story.pending') }}">Nove znamenitosti <span class="badge">42</span></a></li>
+                <li class="{{ request()->path() == "dashboard" ? 'active' : 'n' }}"><a href="{{ route('dashboard') }}">Pregled</a></li>
+                <li class="{{ request()->path() == "story/approved" ? 'active' : 'n' }}"><a href="{{ route('story.approved') }}">Znamenitosti</a></li>
+                <li class="{{ request()->path() == "story/pending" ? 'active' : 'n' }}"><a href="{{ route('story.pending') }}">Nove znamenitosti <span class="badge">{{$pendingStoriesCount}}</span></a></li>
+                <li class="{{ request()->path() == "tour/all" ? 'active' : 'n' }}"><a href="{{ route('tour.all') }}">Izleti</a></li>
             </ul>
 
             @if (Auth::guest())

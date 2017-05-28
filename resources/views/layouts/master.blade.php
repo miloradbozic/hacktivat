@@ -13,7 +13,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+    <script src="js/Chart.min.js"></script>
+    <script src="js/utils.js"></script>
 </head>
 <body>
     @include('layouts.partials.navbar')
@@ -23,14 +24,6 @@
     <footer class="footer">
         <div class="container text-center">
         <p class="pull-left">© 2017 Montenegrowonders</p>
-        <ul class="pull-right list-inline">
-            <li>
-                <a href="https://github.com/unicodeveloper/laravel-hackathon-starter">GitHub Project</a>
-            </li>
-            <li>
-                <a href="https://github.com/unicodeveloper/laravel-hackathon-starter/issues">Issues</a>
-            </li>
-        </ul>
         </div>
     </footer>
 </body>

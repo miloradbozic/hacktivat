@@ -34,7 +34,11 @@ Route::group(['namespace' => 'Api'], function () {
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/dashboard', [
-        'as' => 'home', 'uses' => 'Admin\DashboardController@index'
+        'as' => 'dashboard', 'uses' => 'Admin\DashboardController@index'
+    ]);
+
+    Route::get('/story/approved', [
+        'as' => 'story.approved', 'uses' => 'Admin\StoryController@approved'
     ]);
 
     Route::get('/story/pending', [
@@ -51,6 +55,14 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/story/decline/{id}', [
         'as' => 'story.decline', 'uses' => 'Admin\StoryController@decline'
+    ]);
+
+    Route::get('/tour/all', [
+        'as' => 'tour.all', 'uses' => 'Admin\TourController@all'
+    ]);
+
+    Route::get('/tour/details/{id}', [
+        'as' => 'tour.details', 'uses' => 'Admin\TourController@details'
     ]);
 
     Route::get('/', [
