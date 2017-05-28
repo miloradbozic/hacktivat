@@ -14,13 +14,13 @@ class TourController extends Controller
 
     public function all()
     {
-        $tours = Tour::with('tourSegments.story.author')->get();
+        $tours = Tour::with('tourSegments.story.author')->with('author')->get();
         return $tours;
     }
 
     public function user($userId)
     {
-        $tour = Tour::find($userId)->with('tourSegments.story.author')->first();
+        $tour = Tour::find($userId)->with('tourSegments.story.author')->with('author')->first();
         return $tour;
 
     }

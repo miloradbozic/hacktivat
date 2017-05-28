@@ -29,4 +29,10 @@ class Tour extends Model
     {
         return rand(6,10) / 2;
     }
+
+    public function author()
+    {
+        return $this->hasOne('App\User', 'id', 'author_id')
+            ->orderBy('id', 'asc');
+    }
 }
