@@ -42,7 +42,7 @@
                 </table>
             </div>
         </div>
-        <!--
+
         <h2>Statistika za doživljaje</h2>
         <div class="row">
             <div class="col-md-6"><canvas id="canvas2"></canvas></div>
@@ -83,17 +83,16 @@
                 </table>
             </div>
         </div>
-        -->
     </div>
 
     <script>
 
         var stories = [
-                {'id' : 1,'name' : "Srednjevekovni grad Koznik"},
-                {'id' : 2, 'name': "Biblioteka manastira Sveta Trojica iz Pjevlja"},
-                {'id' : 3, 'name': "Husein-pašina džamija"},
-                {'id' : 4, 'name' : "Prva pivara u Crnoj Gori"}
+                @foreach ($stories as $story)
+                {'id' : "{{$story->id}}",'name' : "{{$story->name}}", 'rating' : "{{$story->average_rating}}"},
+                @endforeach
         ];
+
         var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         var config = {
             type: 'line',

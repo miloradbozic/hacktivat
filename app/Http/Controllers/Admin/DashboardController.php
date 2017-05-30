@@ -23,7 +23,8 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $stories = Story::all();
+        $stories = Story::where('status', Story::STATUS_APPROVED)->get();
+
         return view('admin.dashboard')
             ->withStories($stories);
 
